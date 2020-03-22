@@ -7,7 +7,6 @@ class Application
     num_2 = Kernel.rand(12..24)
     
     resp.write "#{num_1}\n"
-    resp.write "#{num_2}\n"
  
     if num_1 <= num_2 
       resp.write "Good Morning!"
