@@ -13,12 +13,12 @@ class Application
     resp.write "#{num_1}\n"
     resp.write "#{num_2}\n"
  
-      if Time < 12
-        resp.write "Good Morning!"
-        resp.finish
-      elsif Time > 12
-        resp.write "Good Afternoon!"
-        resp.finish
-      end
+     if num_1 <= num_2 
+      resp.write "Good Morning!"
+    else
+      resp.write "Good Afternoon!"
+    end
+ 
+    resp.finish
   end
 end
