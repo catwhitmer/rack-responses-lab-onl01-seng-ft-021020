@@ -3,15 +3,11 @@ class Application
   def call(env)
     resp = Rack::Response.new
  
-    num_1 = Kernel.rand(1..11)
-    num_2 = Kernel.rand(12..24)
-    
-    resp.write "#{num_1}\n"
-    resp.write "#{num_2}\n"
+    time = Time.now.hour
  
-    if num_1 > num_2 
+    if time <= 12
       resp.write "Good Morning!"
-    elsif num_1 <= num_2
+    else
       resp.write "Good Afternoon!"
     end
  
